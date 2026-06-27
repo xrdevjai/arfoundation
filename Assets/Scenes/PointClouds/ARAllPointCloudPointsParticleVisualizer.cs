@@ -40,6 +40,11 @@ namespace UnityEngine.XR.ARFoundation
 
         public int totalPointCount => m_Points.Count;
 
+        public IReadOnlyDictionary<ulong, Vector3> AllPoints
+        {
+            get => m_Points;
+        }
+
         void OnPointCloudChanged(ARPointCloudUpdatedEventArgs eventArgs)
         {
             RenderPoints();
